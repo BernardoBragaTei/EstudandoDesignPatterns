@@ -6,7 +6,8 @@ namespace SimpleFactory
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			Pizzaria.SolicitarPizza();
+			Console.ReadKey();
 		}
 	}
 }
