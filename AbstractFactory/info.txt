@@ -1,0 +1,7 @@
+﻿#Padão Abstract Factory
+- Abstração de fábricas de objetos
+- Serve para abstrair a instanciação de famílias de produtos (conjuntos de classes que trabalham juntas)
+- Ex.: Abstração de componentes de interface de usuário para diferentes plataformas (janelas, barras de rolagem, botões, etc)
+
+Estudo baseado na aula do Macoratti
+link: https://www.youtube.com/watch?v=-gpfanU8gRI&list=PLJ4k1IC8GhW1L7fOWe238fetknEfBmG1I&index=4
