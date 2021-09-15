@@ -9,6 +9,7 @@ namespace Singleton
 	class SingletonClass
 	{
 		private static SingletonClass instance;
+		private static readonly object lockObject = new object();
 
 		private SingletonClass()
 		{
@@ -19,11 +20,16 @@ namespace Singleton
 		{
 			get
 			{
-				if (instance == null)
+				if (instance == null) //Verificação dupla para evitar bloqueios desnecessários
 				{
-					instance = new SingletonClass();
+					lock (lockObject) //Segurança para execução multithread
+					{
+						if (instance == null) 
+							instance = new SingletonClass();
+					}
 				}
 				return instance;
+
 			}
 		}
 
